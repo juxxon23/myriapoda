@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://r1vofg1bc84y"]
+
+[ext_resource type="Script" uid="uid://12ld0jf6rrqf" path="res://menus/start_screen.gd" id="1_cdxmd"]
+
+[node name="StartScreen" type="CanvasLayer"]
+script = ExtResource("1_cdxmd")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 72
+text = "SNAKE GAME"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_bottom = 25
+
+[node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.783504, 0.550836, 0.117214, 1)
+text = "High Score: 0"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StartButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
