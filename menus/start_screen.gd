@@ -1,7 +1,7 @@
 class_name StartScreen
 extends CanvasLayer
 
-const gameplay_scene: PackedScene = preload("res://gameplay/gameplay.tscn")
+const gameplay_scene: PackedScene = preload("uid://dxmalnuxfi7d2")
 
 @onready var score: Label = %ScoreLabel
 @onready var start: Button = %StartButton

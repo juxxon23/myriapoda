@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="myriapoda"
+run/main_scene="uid://r1vofg1bc84y"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/show_image=false
+config/icon="uid://dopcd1nmit8p"
+
+[autoload]
+
+Global="*res://autoloads/global.gd"
 
 [rendering]
 

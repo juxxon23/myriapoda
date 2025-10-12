@@ -1,8 +1,8 @@
 class_name Gameplay
 extends Node2D
 
-const gameover_scene:  PackedScene = preload("res://menus/game_over.tscn")
-const pausemenu_scene:  PackedScene = preload("res://menus/pause_menu.tscn")
+const gameover_scene:  PackedScene = preload("uid://mdfrrnsaukcp")
+const pausemenu_scene:  PackedScene = preload("uid://bpankxymenwob")
 
 @onready var head: Head = %Head as Head # 'as Head' helps with the autocomplete of Head's functions
 @onready var bounds: Bounds = %Bounds as Bounds

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://dxmalnuxfi7d2"]
 
-[ext_resource type="Script" uid="uid://b4mpkm8k0lcf8" path="res://gameplay/gameplay.gd" id="1_nyvx4"]
+[ext_resource type="Script" uid="uid://duld37h8ws377" path="res://gameplay/gameplay.gd" id="1_nyvx4"]
 [ext_resource type="PackedScene" uid="uid://c368f05dync6j" path="res://gameplay/head.tscn" id="2_41n4r"]
-[ext_resource type="Texture2D" uid="uid://cpckqwe0dlbbj" path="res://gameplay/sprites/grid_tile.png" id="2_ktb3l"]
-[ext_resource type="Script" uid="uid://r8m021f3g5ht" path="res://gameplay/bounds.gd" id="3_ueusv"]
-[ext_resource type="Script" uid="uid://bo7g0tpoyixey" path="res://gameplay/spawner.gd" id="5_gvicd"]
+[ext_resource type="Texture2D" uid="uid://b7kqerkrsls76" path="res://gameplay/sprites/grid_tile.png" id="2_ktb3l"]
+[ext_resource type="Script" uid="uid://ceh7k56p51wv6" path="res://gameplay/bounds.gd" id="3_ueusv"]
+[ext_resource type="Script" uid="uid://chcy7qevqxsm5" path="res://gameplay/spawner.gd" id="5_gvicd"]
 [ext_resource type="PackedScene" uid="uid://bgqbrud71p6x2" path="res://menus/hud.tscn" id="6_7pdct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvicd"]

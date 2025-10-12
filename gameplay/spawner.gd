@@ -5,8 +5,8 @@ signal tail_added(tail: Tail)
 
 @export var bounds: Bounds
 
-var food_scene: PackedScene = preload("res://gameplay/food.tscn")
-var tail_scene: PackedScene = preload("res://gameplay/tail.tscn")
+var food_scene: PackedScene = preload("uid://b8o3mjaji5xvl")
+var tail_scene: PackedScene = preload("uid://c1s6nrq6eqh44")
 
 
 func spawn_food() -> void:
