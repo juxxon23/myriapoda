@@ -37,12 +37,20 @@ func _process(_delta: float) -> void:
 	var new_dir: Vector2 = Vector2.ZERO
 	if Input.is_action_pressed("ui_up"):
 		new_dir = Vector2.UP
+		head.rotate_now(true)
+		head.flip_vertical(false)
 	elif Input.is_action_pressed("ui_down"):
 		new_dir = Vector2.DOWN
+		head.rotate_now(true)
+		head.flip_vertical(true)
 	elif Input.is_action_pressed("ui_right"):
 		new_dir = Vector2.RIGHT
+		head.rotate_now(false)
+		head.flip_horizontal(false)
 	elif Input.is_action_pressed("ui_left"):
 		new_dir = Vector2.LEFT
+		head.rotate_now(false)
+		head.flip_horizontal(true)
 		
 	# Don't allow reverse directions
 	if new_dir + move_dir != Vector2.ZERO and new_dir != Vector2.ZERO:
