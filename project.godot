@@ -20,6 +20,11 @@ config/icon="uid://dopcd1nmit8p"
 
 Global="*res://autoloads/global.gd"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=448
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

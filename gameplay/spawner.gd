@@ -17,6 +17,7 @@ func spawn_food() -> void:
 	# fit in the grid
 	spawn_point.x = floorf(spawn_point.x / Global.GRID_SIZE) * Global.GRID_SIZE
 	spawn_point.y = floorf(spawn_point.y / Global.GRID_SIZE) * Global.GRID_SIZE
+	print(spawn_point)
 	# instantiating
 	var food = food_scene.instantiate()
 	food.position = spawn_point
