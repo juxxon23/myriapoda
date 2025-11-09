@@ -2,10 +2,10 @@ class_name Head
 extends SnakePart
 
 signal food_eaten
-signal collide_with_tail
+signal collide_with_segment
 
-@onready var top: Sprite2D = %Top as Sprite2D
-@onready var coll_top: CollisionShape2D = %CollTop as CollisionShape2D
+@onready var sprite_head: Sprite2D = %SpriteHead
+@onready var collision_head: CollisionShape2D = %CollisionHead
 
 
 func _ready() -> void:
@@ -17,9 +17,9 @@ func _on_area_entered(area: Area2D) -> void:
 		food_eaten.emit()
 		area.call_deferred("queue_free")
 	else:
-		collide_with_tail.emit()
+		collide_with_segment.emit()
 
 
 func set_head_props() -> void:
-	sprite_part = top
-	collision_part = coll_top
+	sprite_part = sprite_head
+	collision_part = collision_head

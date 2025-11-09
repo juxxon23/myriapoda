@@ -1,6 +1,7 @@
 class_name SnakePart
 extends Area2D
 
+var penultimate_position: Vector2
 var last_position: Vector2
 var sprite_part: Sprite2D
 var collision_part: CollisionShape2D

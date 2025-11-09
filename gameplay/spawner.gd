@@ -1,12 +1,12 @@
 class_name Spawner
 extends Node2D
 
-signal tail_added(tail: Tail)
+signal segment_added(segment: Segment)
 
 @export var bounds: Bounds
 
 var food_scene: PackedScene = preload("uid://b8o3mjaji5xvl")
-var tail_scene: PackedScene = preload("uid://c1s6nrq6eqh44")
+var segment_scene: PackedScene = preload("uid://c1s6nrq6eqh44")
 
 
 func spawn_food() -> void:
@@ -24,8 +24,8 @@ func spawn_food() -> void:
 	get_parent().add_child(food)
 
 
-func spawn_tail(pos: Vector2) -> void:
-	var tail: Tail = tail_scene.instantiate() as Tail
-	tail.position = pos
-	get_parent().add_child(tail)
-	tail_added.emit(tail)
+func spawn_segment(pos: Vector2) -> void:
+	var segment: Segment = segment_scene.instantiate() as Segment
+	segment.position = pos
+	get_parent().add_child(segment)
+	segment_added.emit(segment)
