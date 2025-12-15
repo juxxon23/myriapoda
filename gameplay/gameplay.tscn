@@ -113,3 +113,10 @@ bounds = NodePath("../Bounds")
 
 [node name="HUD" parent="." instance=ExtResource("6_7pdct")]
 unique_name_in_owner = true
+
+[node name="DashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.09
+one_shot = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]

@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbf07y0snpfwo"]
+[gd_scene load_steps=4 format=3 uid="uid://cbf07y0snpfwo"]
 
 [ext_resource type="Script" uid="uid://cwmutbb6srqr4" path="res://gameplay/tail.gd" id="1_kioum"]
 [ext_resource type="Texture2D" uid="uid://caqvanplp00re" path="res://gameplay/sprites/characters/sg/tail32.png" id="1_yk777"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kioum"]
+radius = 5.0
+height = 16.0
 
 [node name="Tail" type="Area2D"]
 script = ExtResource("1_kioum")
@@ -10,3 +14,7 @@ script = ExtResource("1_kioum")
 position = Vector2(16, 0)
 rotation = 1.5707964
 texture = ExtResource("1_yk777")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26, 0)
+shape = SubResource("CapsuleShape2D_kioum")
