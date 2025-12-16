@@ -19,6 +19,7 @@ var speed: float = BASIC_SPEED
 var speed_accumulation: float = 0.0
 var move_dir: Vector2 = Vector2.RIGHT
 var snake_parts: Array[SnakePart] = []
+var create_elbow: bool = false
 var gameover_menu: GameOver
 var pause_menu: PauseMenu
 var score: int:
@@ -55,6 +56,8 @@ func _process(_delta: float) -> void:
 	if new_dir + move_dir != Vector2.ZERO and new_dir != Vector2.ZERO:
 		move_dir = new_dir
 		head.rotate_part(move_dir)
+		head.first_position = head.position
+		create_elbow = true
 		
 	if Input.is_action_just_pressed("ui_cancel"):
 		pause_game()
@@ -65,7 +68,6 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(speed, " @@@ ", speed_accumulation)
 	time_since_last_move += delta * speed
 	if time_since_last_move >= time_between_moves:
 		update_snake()
@@ -81,6 +83,8 @@ func update_snake() -> void:
 		if i == snake_parts.size()-2:
 			snake_parts[i].penultimate_position = snake_parts[i-1].last_position
 		snake_parts[i].move_to(snake_parts[i-1].last_position)
+		if create_elbow and snake_parts[i].position == head.first_position :
+			snake_parts[i].rotate_part(move_dir)
 
 
 func _on_food_eaten() -> void:

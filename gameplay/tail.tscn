@@ -11,10 +11,12 @@ height = 16.0
 script = ExtResource("1_kioum")
 
 [node name="SpriteTail" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(16, 0)
 rotation = 1.5707964
 texture = ExtResource("1_yk777")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionTail" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(26, 0)
 shape = SubResource("CapsuleShape2D_kioum")

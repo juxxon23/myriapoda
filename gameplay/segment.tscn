@@ -10,11 +10,13 @@ size = Vector2(22, 30)
 script = ExtResource("1_7rta4")
 
 [node name="SpriteSegment" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(16, 0)
 rotation = 1.5707964
 texture = ExtResource("2_o23k4")
 
 [node name="CollisionSegment" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(16, 0)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_va2nl")
